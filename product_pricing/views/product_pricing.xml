@@ -10,8 +10,14 @@
                 <field name="product_name"/>
                 <field name="shop"/>
                 <field name="price"/>
-                <field name="dicount"/>
-                <field name="standard"/>
+                <field name="status"/>
+                <field name="comments"/>
+                <field name="on_shop_quantity"/>
+                <field name="etl"/>
+                <field name="cdiscount"/>
+                <field name="ifulfillment"/>
+                <field name="cguk"/>
+                <field name="wayde"/>
                 <!-- <field name="record"/> -->
                 <!-- <field name="amazon_id"/>
                 <field name="wayfair_id"/>
@@ -34,8 +40,14 @@
                             <field name="product_name"/>
                             <field name="shop"/>
                             <field name="price"/>
-                            <field name="dicount"/>
-                            <field name="standard"/>
+                            <field name="status"/>
+                            <field name="comments"/>
+                            <field name="on_shop_quantity"/>
+                            <field name="etl"/>
+                            <field name="cdiscount"/>
+                            <field name="ifulfillment"/>
+                            <field name="cguk"/>
+                            <field name="wayde"/>
                         </group>
                         <group>
                             <!-- <field name="amazon_id"/>
@@ -61,8 +73,14 @@
                 <field name="product_name"/>
                 <field name="shop"/>
                 <field name="price"/>
-                <field name="dicount"/>
-                <field name="standard"/>
+                <field name="status"/>
+                <field name="comments"/>
+                <field name="on_shop_quantity"/>
+                <field name="etl"/>
+                <field name="cdiscount"/>
+                <field name="ifulfillment"/>
+                <field name="cguk"/>
+                <field name="wayde"/>
                 <field name="amazon_id"/>
                 <field name="wayfair_id"/>
                 <field name="cdiscount_id"/>
@@ -88,13 +106,30 @@
                                 }</field>
     </record>
 
+    <record id="mapping_on_hand_warehouse_quantity" model="ir.actions.server">
+        <field name="name">Mapping Stock Quantity</field>
+        <field name="model_id" ref="model_product_pricing"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.getting_on_hand_warehouse_quantity()
+        </field>
+        <field name="binding_model_id" ref="model_product_pricing"/>
+        <field name="binding_type">action</field>
+    </record>
 
 
 
 
-    <menuitem id="product_pricing_menu" name="Products Pricing" web_icon="product_pricing,static/description/dollar.png"/>
 
-    <menuitem id="product_pricing_submenu" action="product_pricing_action" parent="product_pricing_menu" name="Analysis"/>
+
+
+    <menuitem id="product_pricing_menu" name="Products Pricing" web_icon="product_pricing,static/description/MicrosoftTeams-image (3).png"/>
+
+
+    <menuitem id="analysis_submenuu" parent ='product_pricing_menu' name="Analysis" sequence= '-100'/>
+
+    <menuitem id="product_pricing_submenu" action="product_pricing_action" parent="analysis_submenuu" name="Stock Analysis"/>
+
 
     <menuitem id="product_pricing_submenuu" parent="product_pricing_menu" name="Shops"/>
 

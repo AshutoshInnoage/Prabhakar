@@ -57,12 +57,18 @@
         <field name="model">wayfair.shops</field>
         <field name="arch" type="xml">
             <form>
-            <header>
-                <button name = "product_pricing_action" type = "object" string = "Product Pricing" class = 'btn-primary'/>           
-            </header>
+                <header>
+                    <button name="product_shopp_action" type="object" class = 'btn-primary' string="Map Product Pricing"/>
+                    
+                    <button name="mapping_wayfair_product_stock" type="object" class = 'btn-primary' string="Map Stock"/>
+
+                </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button name="wayfair_product_action" type="object" class="oe_stat_button" icon="fa-cubes" string="Product Listing"/>
+                        <button name="wayfair_product_listing_action" type="object" class="oe_stat_button" icon="fa-cubes" string="Product Listing"/>
+                        
+                        <button name = "product_pricing_action" type = "object" icon="fa-usd" string = "Stock" class = 'oe_stat_button'/>
+
                     </div>
 
                     <group>
@@ -74,14 +80,6 @@
 
                         </group>
                     </group>
-                    <!-- <notebook>
-                        <page string="Product Configuration">
-                            <group>
-                                <button name = "wayfair_product_action" type = "object" string = "Product Listing" class = 'btn-primary'/>
-                            </group>
-                        </page>
-                        
-                    </notebook> -->
 
                 </sheet>
 

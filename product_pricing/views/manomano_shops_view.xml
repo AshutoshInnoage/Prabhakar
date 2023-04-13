@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-
     <record id ="manomano_shop_kanban_view" model ="ir.ui.view">
         <field name = "name">manomano.shops.kanban.view</field>
         <field name = "model">manomano.shops</field>
@@ -21,8 +20,8 @@
                                         </span>
                                     </strong>
                                 </div>
-
                             </div>
+
                             <div class="row mt8">
                                 <!-- <div class="col-6 text-muted mb-2 text-center">
                                     <span class="text-warning">URL : <t t-esc="record.url.value"/>
@@ -52,40 +51,35 @@
             </tree>
         </field>
     </record>
+
     <record id="manomano_shop_form_view" model="ir.ui.view">
         <field name="name">manomano.shops.form.view</field>
         <field name="model">manomano.shops</field>
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name = "product_pricing_action" type = "object" string = "Product Pricing" class = 'btn-primary'/>
+                    
+                    <button name="product_shopp_action" type="object" class = 'btn-primary' string="Map Pricing"/>
+                    
+                    <button name="mapping_manomano_products_stock" type="object" class = 'btn-primary' string="Map Stock"/>
+
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
+
                         <button name="mano_product_action" type="object" class="oe_stat_button" icon="fa-cubes" string="Product Listing"/>
 
+                        <button name = "returning_method_for_stock" type = "object" icon="fa-usd" string = "Stock" class = 'btn-primary'/>
                     </div>
                     <group>
                         <group>
-
                             <field name = "shop_name"/>
                             <field name = "url"/>
                             <field name = "total_no_of_products"/>
 
                         </group>
                     </group>
-                    <!-- <notebook>
-                        <page string="Product Configuration">
-                            <group>
-                                <button name = "mano_product_action" type = "object" string = "Product Listing" class = 'btn-primary'/>
-                            </group>
-                        </page>
-
-                    </notebook> -->
-
                 </sheet>
-
-
             </form>
         </field>
     </record>
@@ -103,21 +97,15 @@
         </field>
     </record>
 
-
-
     <record id="manomano_shop_action" model="ir.actions.act_window">
         <field name="name">Manomano shops</field>
         <field name="res_model">manomano.shops</field>
         <field name="view_mode">kanban,tree,form</field>
 
     </record>
-
-
-
-
-
-
-    <menuitem id="manomano_menu" parent="product_pricing_submenuu" action="manomano_shop_action" name="Mano Mano"/>
-
+    
+    <menuitem id="manomano_menu" parent="product_pricing_submenuu" 
+    
+    action="manomano_shop_action" name="Mano Mano"/>
 
 </odoo>

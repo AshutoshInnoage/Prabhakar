@@ -12,3 +12,4 @@ from . import mirakl_product
 from . import cdiscount_shop
 from . import cdiscount_product
 from . import competitor
+from . import product_shops

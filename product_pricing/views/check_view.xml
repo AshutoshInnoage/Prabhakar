@@ -55,11 +55,15 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name = "product_pricing_action" type = "object" string = "Product Pricing" class = 'btn-primary'/>
+
+                    <button name="product_shopp_action" type="object" class = 'btn-primary' string="Map Product Pricing"/>
+                    
+                    <button name="mapping_check_products_stock" type="object" class = 'btn-primary' string="Map Stock"/>
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="check_product_action" type="object" class="oe_stat_button" icon="fa-cubes" string="Product Listing"/>
+                        <button name = "product_pricing_action" type = "object" string = "Stock" icon="fa-usd" class = 'btn-primary'/>
                     </div>
                     <group>
                         <group>

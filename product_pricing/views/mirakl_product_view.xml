@@ -8,6 +8,7 @@
             <tree>
                 <field name="product_sku"/>
                 <field name="price"/>
+                <field name="on_shop_quantity"/>
                 <field name="link"/>
                 <field name="status"/>
                 <!-- <field name="mirakl_shop_id"/> -->
@@ -25,6 +26,7 @@
                         <group>
                             <field name="product_sku"/>
                             <field name="price"/>
+                            <field name="on_shop_quantity"/>
                             <field name="link"/>
                             <field name="status"/>
                         </group>
@@ -43,6 +45,9 @@
                 <field name="price"/>
                 <field name="link"/>
                 <field name="status"/>
+                <group expand="1" string="Group By">
+                    <filter name="group_by_date" string="By date" context="{'group_by': 'create_date:day'}"/>
+                </group>
             </search>
         </field>
     </record>

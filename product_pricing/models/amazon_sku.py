@@ -24,7 +24,7 @@ class AmazonSKU(models.Model):
                 amazon_shop_id =self.env['amazon.shops'].search([('id', '=', res._context.get('active_id'))])
                 product.amazon_shop_id = amazon_shop_id.id
                 if product.amazon_shop_id.url:
-                    _logger.info("............  %r ,.....%r......",product.merchant_suggested_asin, product.amazon_shop_id.url)
+                    # _logger.info("............  %r ,.....%r......",product.merchant_suggested_asin, product.amazon_shop_id.url)
                     product.product_url = product.amazon_shop_id.url + product.merchant_suggested_asin
         return res
     

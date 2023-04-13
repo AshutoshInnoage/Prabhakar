@@ -7,7 +7,7 @@
     'summary': 'Odoo Product Pricing Analysis',
     'description': """Odoo Product Pricing Analysis""",
     'website': '',
-    'depends': ['sale'],
+    'depends': ['sale', "odoo_mirakl_integration" , "cdiscount_connector"],
     'data': [
                 "security/ir.model.access.csv",
                 "views/product_pricing.xml",
@@ -23,7 +23,9 @@
                 "views/mirakl_shop_view.xml",
                 "views/mirakl_product_view.xml",
                 "views/cdiscount_product_view.xml",
-                "views/cdiscount_shop_view.xml"
+                "views/cdiscount_shop_view.xml",
+                "views/product_sales_view.xml",
+                "views/cron.xml"
             ],
     'application': True,
     'installable': True,

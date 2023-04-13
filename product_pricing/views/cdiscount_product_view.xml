@@ -10,6 +10,8 @@
                 <field name="price"/>
                 <field name="link"/>
                 <field name="status"/>
+                <field name="shop_quantity"/>
+                <field name="sold_quantity"/>
             </tree>
         </field>
     </record>
@@ -26,6 +28,8 @@
                             <field name="price"/>
                             <field name="link"/>
                             <field name="status"/>
+                            <field name="shop_quantity"/>
+                            <field name="sold_quantity"/>
                         </group>
                     </group>
                 </sheet>
@@ -42,6 +46,8 @@
                 <field name="price"/>
                 <field name="link"/>
                 <field name="status"/>
+                <field name="shop_quantity"/>
+                <field name="sold_quantity"/>
             </search>
         </field>
     </record>

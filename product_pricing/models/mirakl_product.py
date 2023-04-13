@@ -9,10 +9,11 @@ class MiraklProduct(models.Model):
 
     product_sku=fields.Char("Product SKU")
     price=fields.Float("Price")
-    link=fields.Float("Link")
-    status=fields.Float("Status")
+    link=fields.Char("Link")
+    status=fields.Char("Status")
+    on_shop_quantity=fields.Integer("ON Shop Quantity")
     
-    mirakl_shop_id = fields.Many2one("mirakl.offers","Mirakl Shop ID")
+    mirakl_shop_id = fields.Many2one("mirakl.shops","Mirakl Shop ID")
 
 
     @api.model_create_multi
